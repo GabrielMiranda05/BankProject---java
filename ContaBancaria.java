@@ -5,7 +5,6 @@ public class ContaBancaria {
     private String senha;
     private int agencia;
 
-    //construtor
     public ContaBancaria(double saldoInicial, int idConta, String nomeTitular, String senha, int agencia) {
         this.saldo = saldoInicial;
         this.idConta = idConta;
@@ -13,6 +12,14 @@ public class ContaBancaria {
         this.senha = senha;
         this.agencia = agencia;
     }
+
+    public void exibirInformacoes() {
+        System.out.println("Titular: " + nomeTitular);
+        System.out.println("Agência: " + agencia);
+        System.out.println("ID da Conta: " + idConta);
+        System.out.println("Saldo: " + saldo);
+    }
+
 
     public void depositar(double valor){
         if(valor <= 0){
@@ -39,7 +46,7 @@ public class ContaBancaria {
     }
 
     public void setSaldo(double saldo) {
-        if(saldo < 0) {
+        if(saldo < 0 && saldo < -500) {
             System.out.println("Erro: o saldo da conta não pode ser negativo.");
         }else{
             this.saldo = saldo;
