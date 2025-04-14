@@ -13,6 +13,9 @@ public class ContaBancaria {
         this.agencia = agencia;
     }
 
+    public ContaBancaria(String nomeTitular, double saldoInicial, int idConta) {
+    }
+
     public void exibirInformacoes() {
         System.out.println("Titular: " + nomeTitular);
         System.out.println("Agência: " + agencia);
