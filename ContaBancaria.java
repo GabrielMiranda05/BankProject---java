@@ -14,6 +14,9 @@ public class ContaBancaria {
     }
 
     public ContaBancaria(String nomeTitular, double saldoInicial, int idConta) {
+        this.nomeTitular = nomeTitular;
+        this.saldo = saldoInicial;
+        this.idConta = idConta; 
     }
 
     public void exibirInformacoes() {
